@@ -22,7 +22,7 @@ const Styles = StyleSheet.create({
         backgroundColor: 'white',
         alignItems: 'center',
         marginTop: '80',
-        marginHorizontal: '24'
+        marginHorizontal: '24',
     },
     title: {
         fontFamily: 'Inter_18pt-SemiBold',
