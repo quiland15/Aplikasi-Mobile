@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, TextInput, View, StyleSheet } from "react-native";
 
-export default function InputText({placeholder='default', text='default', MarginTop='28'}) {
+export default function InputText({placeholder='default', text='default', MarginTop='28',tinggi='46', multi=false}) {
     return(
         <>
         <View style={styles.container(MarginTop)}>
             <Text style={styles.teks}>{text}</Text>
-            <TextInput style={styles.input} placeholder={placeholder}/>
+            <TextInput style={styles.input(tinggi)} multiline={multi} placeholder={placeholder}/>
         </View>
         </>
     )
@@ -17,13 +17,15 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: MarginTop,
     }),
-    input: {
+    input: tinggi => ({
         borderRadius: 10,
         borderColor: '#ACACAE',
         borderWidth: 1,
         width: '100%',
         paddingHorizontal: '17',
-    },
+        height: tinggi,
+        textAlignVertical: 'top',
+    }),
     teks: {
         fontFamily: 'Inter_18pt-Regular',
         fontSize: 15,

@@ -1,27 +1,31 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, Image, StyleSheet, ScrollView } from "react-native";
+import Teks from "../../components/atoms/Teks";
 import InputText from "../../components/molecules/InputText";
 import Button from "../../components/atoms/Button";
-import Teks from "../../components/atoms/Teks";
 
 export default function DaftarAkun() {
     return(
-        <>
-            <View style={Styles.container}>
+        <ScrollView>
+            <View style={styles.container}>
                 <Image source={require('../../assets/img/Logo1.png')}/>
-                <Teks label="Selamat Datang" fontfamily="Inter_18pt-SemiBold" fontsize={24} margintop={28}/>Selamat Datang
-                <Teks label="Masuk ke akun PupukKu anda" fontfamily="Inter_18pt-Light" fontsize={16} margintop={10}/>
-                <InputText placeholder="Contoh: 081234567890" text="Nomor HP" MarginTop="47"/>
-                <InputText placeholder="Masukkan Password" text="Password"/>
-                <Button radius={10} margintop={17} color="#4CAF50" label="Masuk"/>
-                <Teks label="Belum Punya Akun ?" fontfamily="Inter_18pt-Medium" fontsize={12} margintop={38}/>
-                <Button radius={10} margintop={17} color="#D68D33" label="Daftar Sekarang" fontfamily="Inter_18pt-Bold"/>
+                <Teks label="Daftar Akun" fontfamily="Inter_18pt-SemiBold" fontsize={24} margintop={28}/>
+                <Teks label="Bergabung dengan PupukKu" fontfamily="Inter_18pt-Light" fontsize={16} margintop={10}/>
+                <InputText text="Nama Lengkap" placeholder="Masukkan Nama Lengkap"/>
+                <InputText text="Nomor HP" placeholder="contoh: 081234567890"/>
+                <InputText text="Alamat" placeholder="Masukkan Alamat Lengkap Anda" tinggi="132" multi={true}/>
+                <Teks/>
+                <Button/>
+                <Button/>
+                <InputText/>
+                <InputText/>
+                <Teks/>
             </View>
-        </>
-    );
-};
+        </ScrollView>
+    )
+}
 
-const Styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flexGrow: 1,
         backgroundColor: 'white',
