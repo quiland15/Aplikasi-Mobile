@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import InputText from "../../components/InputText";
-import Button from "../../components/Button";
+import InputText from "../../components/molecules/InputText";
+import Button from "../../components/atoms/Button";
 
 export default function DaftarAkun() {
     return(
