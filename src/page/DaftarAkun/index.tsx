@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import InputText from "../../components/InputText";
+import Button from "../../components/Button";
 
 export default function DaftarAkun() {
     return(
@@ -11,6 +12,9 @@ export default function DaftarAkun() {
                 <Text style={Styles.subtitle}>Masuk ke akun PupukKu Anda</Text>
                 <InputText placeholder="Contoh: 081234567890" text="Nomor HP" MarginTop="47"/>
                 <InputText placeholder="Masukkan Password" text="Password"/>
+                <Button radius={10} margintop={17} color="#4CAF50" label="Masuk"/>
+                <Text style={Styles.Dont}>Belum Punya Akun ?</Text>
+                <Button radius={10} margintop={17} color="#D68D33" label="Daftar Sekarang" fontfamily="Inter_18pt-Bold"/>
             </View>
         </>
     );
@@ -33,5 +37,10 @@ const Styles = StyleSheet.create({
         fontFamily: 'Inter_18pt-Light',
         fontSize: 16,
         marginTop: '10',
+    },
+    Dont: {
+        marginTop: 38,
+        fontFamily: 'Inter_18pt-Medium',
+        fontSize: 12,
     }
 })
