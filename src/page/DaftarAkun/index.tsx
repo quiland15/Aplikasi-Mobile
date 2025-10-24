@@ -17,12 +17,16 @@ export default function DaftarAkun() {
                 <InputText text="Alamat" placeholder="Masukkan Alamat Lengkap Anda" tinggi="132" multi={true}/>
                 <Teks label="Jenis Akun" fontfamily="Inter_18pt-Regular" fontsize={15} alignself="flex-start"/>
                 <View style={styles.CardRow}>
-                    <CardButton/>
-                    <CardButton/>
+                    <CardButton gambar="farmer" fontfamily="Inter_18pt-SemiBold" label="Petani"/>
+                    <CardButton gambar="shop" margintop={10} fontfamily="Inter_18pt-SemiBold" label="Shop"/>
                 </View>
-                <InputText/>
-                <InputText/>
-                <Teks/>
+                <InputText text="Password" placeholder="Password Anda" />
+                <InputText text="Konfirmasi Password" placeholder="Konfirmasi Password Anda"/>
+                <Button color="#4CAF50" radius={10} margintop={15} fontfamily="Inter_18pt-SemiBold" label="Daftar" fontsize={17}/>
+                <View style={styles.CardRow}>
+                    <Teks label="Sudah Punya Akun?" fontfamily="Inter_18pt-Medium" fontsize={13}/>
+                    <Button color="white" label="Masuk" colortext="black" fontsize={13} Width="15%"/>
+                </View>
             </View>
         </ScrollView>
     )
